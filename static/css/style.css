@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Default text color */
+    background: url('/static/images/school_bg.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the background covers the entire viewport */
+}
+
+/* Apply a blur effect to the body */
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: inherit; /* Use the body's background */
+    filter: blur(8px); /* Blur effect */
+    z-index: -1; /* Keep it behind content */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between exit button and menu options */
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for the header */
+    padding: 20px;
+}
+
+.menu-options {
+    display: flex; /* Arrange menu items horizontally */
+    list-style: none; /* Remove bullet points */
+    gap: 20px; /* Space between menu items */
+}
+
+.menu-options a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White color for links */
+    font-weight: bold; /* Bold text for links */
+}
+
+.menu-options a:hover {
+    color: #ddd; /* Lighter color on hover for better visibility */
+}
+
+.exit-button {
+    position: absolute; /* Absolute positioning for exit button */
+    top: 20px; /* Position it at the top */
+    right: 20px; /* Position it on the right */
+    padding: 10px;
+    background: #FF0000; /* Red background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to a pointer on hover */
+}
+
+.exit-button:hover {
+    background: #CC0000; /* Darker red on hover */
+}
+
+/* Styling for the header title */
+.welcome-message {
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Adjust font size */
+    color: white; /* White text color */
+    margin: 40px 0; /* Space above and below the message */
+    font-weight: bold; /* Bold text */
+}
+
+/* Centered section title styling */
+.section-title {
+    text-align: center; /* Center the text */
+    font-size: 1.5em; /* Adjust font size */
+    color: white; /* White text color */
+    margin: 20px 0; /* Space above and below the message */
+    font-weight: bold; /* Bold text */
+}
+
+/* Table styling */
+table {
+    width: 80%; /* Set the table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Merge borders */
+    background: rgba(255, 255, 255, 0.9); /* Light background for the table */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+th, td {
+    padding: 12px; /* Add padding for table cells */
+    text-align: center; /* Center text in table cells */
+    border-bottom: 1px solid #ddd; /* Light gray border for rows */
+}
+
+th {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for header */
+    color: white; /* White text for header */
+}
+
+tr:hover {
+    background: rgba(0, 123, 255, 0.1); /* Light blue background on hover for rows */
+    cursor: pointer; /* Change cursor to pointer when hovering over a row */
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(240, 240, 240, 0.6); /* Light gray for odd rows */
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for even rows */
+}
+
+/* Optional: Specific hover for odd and even rows */
+tr:nth-child(odd):hover {
+    background-color: rgba(200, 200, 200, 0.8); /* Different color for odd rows on hover */
+}
+
+tr:nth-child(even):hover {
+    background-color: rgba(230, 230, 230, 0.8); /* Different color for even rows on hover */
+}
+
+/* Form styling */
+.student-form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for contrast */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Styles for input fields */
+.input-field {
+    width: 100%;  /* Full width for inputs */
+    padding: 10px; /* Add padding */
+    margin: 10px 0; /* Margin between inputs, increased for spacing */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Spacing for submit button */
+.submit-button {
+    padding: 10px; /* Padding */
+    background: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-weight: bold; /* Bold text for the button */
+    width: 100%; /* Full-width button */
+    margin-top: 10px; /* Space above submit button */
+}
+
+.submit-button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Styling for the subheader */
+.sub-banner {
+    text-align: center; /* Center the subbanner text */
+    margin: 20px 0; /* Space above and below the subbanner */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for the sub-banner */
+    padding: 15px; /* Padding inside the sub-banner */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Subheader styling */
+.subheader {
+    text-align: left; /* Align text to the left */
+    font-size: 1.5em; /* Font size for the subheader */
+    color: white; /* White text color for visibility */
+    margin: 20px 0; /* Space above and below the subheader */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 10px; /* Padding around the subheader */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: dark semi-transparent background for contrast */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styling for the search options container */
+.search-options-container {
+    display: flex; /* Use flexbox for side-by-side options */
+    flex-wrap: wrap; /* Allow wrapping to the next line if there's not enough space */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 15px; /* Spacing between boxes */
+    margin: 20px; /* Space above and below the container */
+}
+
+.search-option-box {
+    background: rgba(255, 255, 255, 0.9); /* Light background for search boxes */
+    padding: 15px; /* Space inside each box */
+    border-radius: 5px; /* Rounded corners for the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    min-width: 200px; /* Minimum width for each option box */
+}
+
+/* Admin Options Container */
+.admin-options-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center boxes within the container */
+    margin: 20px; /* Space around the container */
+    gap: 20px; /* Space between each option box */
+}
+
+/* Admin Option Box Styles */
+.admin-option-box {
+    background: rgba(255, 255, 255, 0.9); /* Light background for the options box */
+    padding: 15px 20px; /* Space inside the box */
+    border-radius: 5px; /* Rounded corners for the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+}
+
+/* Links in Admin Option Boxes */
+.admin-option-box a {
+    color: #007BFF; /* Default color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for the option links */
+    display: block; /* Makes the link fill the entire box */
+    text-align: left; /* Align text to the left */
+}
+
+.admin-option-box a:hover {
+    color: #0056b3; /* Darker color on hover */
+}

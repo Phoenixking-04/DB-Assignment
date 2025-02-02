@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses and Room Details</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.history.back();">Back to Search</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="welcome-message">All Courses and Their Room Capacities</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Schedule</th>
+                <th>Room Capacity</th>
+                <th>Room Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+                <tr>
+                    <td>{{ course.course_id }}</td>
+                    <td>{{ course.course_name }}</td>
+                    <td>{{ course.credits }}</td>
+                    <td>{{ course.schedule }}</td>
+                    <td>
+                        {% if course.sections.exists %}
+                            {% for section in course.sections.all %}
+                                {{ section.building.capacity }}<br>
+                            {% endfor %}
+                        {% else %}
+                            No sections available
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if course.sections.exists %}
+                            {% for section in course.sections.all %}
+                                Building: {{ section.building.building }}<br>
+                                Room Number: {{ section.building.room_number }}<br>
+                                Section: {{ section.section_id }}<br>
+                                Time Slot: {{ section.time_slot }}<br>
+                            {% endfor %}
+                        {% else %}
+                            No sections available
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No courses available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</body>
+</html>

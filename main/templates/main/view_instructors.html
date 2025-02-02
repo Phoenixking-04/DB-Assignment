@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructors</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.location.href='/'">Home</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="welcome-message">Instructors</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Instructor ID</th> <!-- New column for Instructor ID -->
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary</th> <!-- New column for Salary -->
+                <th>Department ID</th> <!-- New column for Department ID -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for instructor in instructors %}
+            <tr>
+                <td>{{ instructor.instructor_id }}</td> <!-- Display Instructor ID -->
+                <td>{{ instructor.first_name }}</td>
+                <td>{{ instructor.last_name }}</td>
+                <td>{{ instructor.salary }}</td> <!-- Display Salary -->
+                <td>{{ instructor.department_id }}</td> <!-- Display Department ID -->
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No instructors available.</td> <!-- Adjusted colspan to match the number of columns -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

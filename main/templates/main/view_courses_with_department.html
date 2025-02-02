@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses with Department</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.history.back();">Back to Search</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="welcome-message">Courses with Department</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Credits</th> <!-- Added Credits Column -->
+                <th>Schedule</th> <!-- Added Schedule Column -->
+                <th>Department Name</th>
+                <th>Building</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.credits }}</td> <!-- Display Credits -->
+                <td>{{ course.schedule }}</td> <!-- Display Schedule -->
+                <td>{{ course.department.department_name }}</td>
+                <td>{{ course.department.building }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No courses available.</td> <!-- Adjusted colspan to 5 -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

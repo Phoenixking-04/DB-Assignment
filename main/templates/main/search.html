@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Menu</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.location.href='/'">Exit</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="welcome-message">Search Menu</h1>
+
+    <div class="search-options-container"> <!-- Container for search options in boxes -->
+        <div class="search-option-box">
+            <a href="{% url 'view_courses_with_department' %}">View Courses with Department Details</a>
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'view_students_with_advisors' %}">View Students with Advisors</a>
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'average_salary_by_department' %}">Average Salary by Department</a>
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'all_courses_with_students' %}">Find Students by Course</a> <!-- Link to students by course -->
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'all_courses_with_instructors' %}">Find Instructors by Course</a> <!-- Updated link to all courses with instructors -->
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'view_course_sections_with_room_capacity' %}">View Course Sections with Room Capacity</a>
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'find_students_by_minimum_credits' min_credits=10 %}">Find Students by Minimum Credits</a>
+        </div>
+        <div class="search-option-box">
+            <a href="{% url 'main_menu' %}">Go Back to the Main Menu</a>
+        </div>
+    </div>
+    
+</body>
+</html>

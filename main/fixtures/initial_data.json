@@ -1,0 +1,783 @@
+[
+    
+    {
+        "model": "main.classroom",
+        "pk": 1,
+        "fields": {
+            "building": "Tech Hall",
+            "room_number": "101",
+            "capacity": 30
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 2,
+        "fields": {
+            "building": "Science Building",
+            "room_number": "201",
+            "capacity": 50
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 3,
+        "fields": {
+            "building": "Math Center",
+            "room_number": "301",
+            "capacity": 40
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 4,
+        "fields": {
+            "building": "Chemistry Lab",
+            "room_number": "401",
+            "capacity": 35
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 5,
+        "fields": {
+            "building": "Physics Building",
+            "room_number": "501",
+            "capacity": 45
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 6,
+        "fields": {
+            "building": "History Hall",
+            "room_number": "601",
+            "capacity": 25
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 7,
+        "fields": {
+            "building": "Literature Hall",
+            "room_number": "701",
+            "capacity": 30
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 8,
+        "fields": {
+            "building": "Music Hall",
+            "room_number": "801",
+            "capacity": 40
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 9,
+        "fields": {
+            "building": "Art Center",
+            "room_number": "901",
+            "capacity": 30
+        }
+    },
+    {
+        "model": "main.classroom",
+        "pk": 10,
+        "fields": {
+            "building": "Philosophy House",
+            "room_number": "1001",
+            "capacity": 20
+        }
+    },
+    
+        
+            {
+                "model": "main.classroom",
+                "pk": 1,
+                "fields": {
+                    "building": "Tech Hall",
+                    "room_number": "101",
+                    "capacity": 30
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 2,
+                "fields": {
+                    "building": "Science Building",
+                    "room_number": "201",
+                    "capacity": 50
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 3,
+                "fields": {
+                    "building": "Math Center",
+                    "room_number": "301",
+                    "capacity": 40
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 4,
+                "fields": {
+                    "building": "Chemistry Lab",
+                    "room_number": "401",
+                    "capacity": 35
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 5,
+                "fields": {
+                    "building": "Physics Building",
+                    "room_number": "501",
+                    "capacity": 45
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 6,
+                "fields": {
+                    "building": "History Hall",
+                    "room_number": "601",
+                    "capacity": 25
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 7,
+                "fields": {
+                    "building": "Literature Hall",
+                    "room_number": "701",
+                    "capacity": 30
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 8,
+                "fields": {
+                    "building": "Music Hall",
+                    "room_number": "801",
+                    "capacity": 40
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 9,
+                "fields": {
+                    "building": "Art Center",
+                    "room_number": "901",
+                    "capacity": 30
+                }
+            },
+            {
+                "model": "main.classroom",
+                "pk": 10,
+                "fields": {
+                    "building": "Philosophy House",
+                    "room_number": "1001",
+                    "capacity": 20
+                }
+            },
+        
+            {
+                "model": "main.department",
+                "pk": 1,
+                "fields": {
+                    "department_name": "Computer Science",
+                    "building": 1,  
+                    "budget": 100000  
+                }
+            },
+            {
+                "model": "main.department",
+                "pk": 2,
+                "fields": {
+                    "department_name": "Biology",
+                    "building": 2,  
+                    "budget": 90000  
+                }
+            },
+            {
+                "model": "main.department",
+                "pk": 3,
+                "fields": {
+                    "department_name": "Mathematics",
+                    "building": 3,  
+                    "budget": 80000  
+                }
+            },
+            {
+                "model": "main.department",
+                "pk": 4,
+                "fields": {
+                    "department_name": "Chemistry",
+                    "building": 4,  
+                    "budget": 95000  
+                }
+            },
+            {
+                "model": "main.department",
+                "pk": 5,
+                "fields": {
+                    "department_name": "Physics",
+                    "building": 5,  
+                    "budget": 85000  
+                }
+            },
+            {
+                "model": "main.department",
+                "pk": 6,
+                "fields": {
+                    "department_name": "History",
+                    "building": 6,  
+                    "budget": 70000  
+                }
+            },
+
+            
+                {
+                    "model": "main.department",
+                    "pk": 7,
+                    "fields": {
+                        "department_name": "Literature",
+                        "building": 7,  
+                        "budget": 60000  
+                    }
+                },
+                {
+                    "model": "main.department",
+                    "pk": 8,
+                    "fields": {
+                        "department_name": "Music",
+                        "building": 8,  
+                        "budget": 65000  
+                    }
+                },
+                {
+                    "model": "main.department",
+                    "pk": 9,
+                    "fields": {
+                        "department_name": "Art",
+                        "building": 9,  
+                        "budget": 59000  
+                    }
+                },
+                {
+                    "model": "main.department",
+                    "pk": 10,
+                    "fields": {
+                        "department_name": "Philosophy",
+                        "building": 10,  
+                        "budget": 55000  
+                    }
+                },
+            
+                {
+                    "model": "main.course",
+                    "pk": 1,
+                    "fields": {
+                        "course_name": "Intro to Programming",
+                        "credits": 3,
+                        "schedule": "CST 9-10AM",
+                        "department": 1  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 2,
+                    "fields": {
+                        "course_name": "Biology 101",
+                        "credits": 3,
+                        "schedule": "CST 11AM-12:30PM",
+                        "department": 2  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 3,
+                    "fields": {
+                        "course_name": "Calculus I",
+                        "credits": 3,
+                        "schedule": "CST 10-11AM",
+                        "department": 3  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 4,
+                    "fields": {
+                        "course_name": "General Chemistry",
+                        "credits": 3,
+                        "schedule": "CST 1-2:30PM",
+                        "department": 4  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 5,
+                    "fields": {
+                        "course_name": "Physics for Engineers",
+                        "credits": 3,
+                        "schedule": "CST 11AM-12PM",
+                        "department": 5  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 6,
+                    "fields": {
+                        "course_name": "World History",
+                        "credits": 3,
+                        "schedule": "CST 1-2PM",
+                        "department": 6  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 7,
+                    "fields": {
+                        "course_name": "Literature and Society",
+                        "credits": 3,
+                        "schedule": "CST 9-10:30AM",
+                        "department": 7  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 8,
+                    "fields": {
+                        "course_name": "Music Theory",
+                        "credits": 3,
+                        "schedule": "CST 2-3PM",
+                        "department": 8  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 9,
+                    "fields": {
+                        "course_name": "Introduction to Painting",
+                        "credits": 3,
+                        "schedule": "CST 3-4:30PM",
+                        "department": 9  
+                    }
+                },
+                {
+                    "model": "main.course",
+                    "pk": 10,
+                    "fields": {
+                        "course_name": "Ethics in Philosophy",
+                        "credits": 3,
+                        "schedule": "CST 10-11AM",
+                        "department": 10  
+                    }
+                },
+    {
+        "model": "main.instructor",
+        "pk": 1,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "salary": 75000.00,
+            "department": 1
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 2,
+        "fields": {
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "salary": 70000.00,
+            "department": 2
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 3,
+        "fields": {
+            "first_name": "Alice",
+            "last_name": "Johnson",
+            "salary": 80000.00,
+            "department": 3
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 4,
+        "fields": {
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "salary": 72000.00,
+            "department": 4
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 5,
+        "fields": {
+            "first_name": "Carol",
+            "last_name": "Davis",
+            "salary": 73000.00,
+            "department": 5
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 6,
+        "fields": {
+            "first_name": "David",
+            "last_name": "Wilson",
+            "salary": 68000.00,
+            "department": 6
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 7,
+        "fields": {
+            "first_name": "Eve",
+            "last_name": "Taylor",
+            "salary": 69000.00,
+            "department": 7
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 8,
+        "fields": {
+            "first_name": "Frank",
+            "last_name": "Anderson",
+            "salary": 71000.00,
+            "department": 8
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 9,
+        "fields": {
+            "first_name": "Grace",
+            "last_name": "Thomas",
+            "salary": 75000.00,
+            "department": 9
+        }
+    },
+    {
+        "model": "main.instructor",
+        "pk": 10,
+        "fields": {
+            "first_name": "Hank",
+            "last_name": "Moore",
+            "salary": 76000.00,
+            "department": 10
+        }
+    },
+    
+    
+        {
+            "model": "main.student",
+            "pk": 1,
+            "fields": {
+                "first_name": "Alex",
+                "last_name": "Miller",
+                "date_of_birth": "2002-05-06",
+                "total_credits": 45,
+                "department_id": 1,   
+                "advisor": 1          
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 2,
+            "fields": {
+                "first_name": "Betty",
+                "last_name": "Clark",
+                "date_of_birth": "2001-11-16",
+                "total_credits": 60,
+                "department_id": 2,
+                "advisor": 2
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 3,
+            "fields": {
+                "first_name": "Charlie",
+                "last_name": "Lewis",
+                "date_of_birth": "2002-07-21",
+                "total_credits": 40,
+                "department_id": 3,
+                "advisor": 1
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 4,
+            "fields": {
+                "first_name": "Diana",
+                "last_name": "Walker",
+                "date_of_birth": "2003-01-12",
+                "total_credits": 50,
+                "department_id": 1,
+                "advisor": 2
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 5,
+            "fields": {
+                "first_name": "Edward",
+                "last_name": "Hall",
+                "date_of_birth": "2002-03-17",
+                "total_credits": 30,
+                "department_id": 2,
+                "advisor": 3
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 6,
+            "fields": {
+                "first_name": "Fiona",
+                "last_name": "Young",
+                "date_of_birth": "2001-12-01",
+                "total_credits": 55,
+                "department_id": 3,
+                "advisor": 1
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 7,
+            "fields": {
+                "first_name": "George",
+                "last_name": "King",
+                "date_of_birth": "2003-04-25",
+                "total_credits": 35,
+                "department_id": 1,
+                "advisor": 2
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 8,
+            "fields": {
+                "first_name": "Helen",
+                "last_name": "Wright",
+                "date_of_birth": "2002-10-30",
+                "total_credits": 40,
+                "department_id": 2,
+                "advisor": 3
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 9,
+            "fields": {
+                "first_name": "Ian",
+                "last_name": "Scott",
+                "date_of_birth": "2001-09-05",
+                "total_credits": 45,
+                "department_id": 3,
+                "advisor": 1
+            }
+        },
+        {
+            "model": "main.student",
+            "pk": 10,
+            "fields": {
+                "first_name": "Julia",
+                "last_name": "Adams",
+                "date_of_birth": "2003-06-13",
+                "total_credits": 50,
+                "department_id": 3,
+                "advisor": 2
+            }
+        },
+    
+        {
+            "model": "main.enrollment",
+            "pk": 1,
+            "fields": {
+                "semester": "Fall 2023",
+                "grade": "A",
+                "course": 1,
+                "student": 1
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 2,
+            "fields": {
+                "semester": "Spring 2023",
+                "grade": "B",
+                "course": 2,
+                "student": 2
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 3,
+            "fields": {
+                "semester": "Fall 2023",
+                "grade": "C",
+                "course": 3,
+                "student": 3
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 4,
+            "fields": {
+                "semester": "Spring 2023",
+                "grade": "B",
+                "course": 4,
+                "student": 4
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 5,
+            "fields": {
+                "semester": "Fall 2023",
+                "grade": "A",
+                "course": 5,
+                "student": 5
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 6,
+            "fields": {
+                "semester": "Spring 2023",
+                "grade": "B",
+                "course": 6,
+                "student": 6
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 7,
+            "fields": {
+                "semester": "Fall 2023",
+                "grade": "C",
+                "course": 7,
+                "student": 7
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 8,
+            "fields": {
+                "semester": "Spring 2023",
+                "grade": "A",
+                "course": 8,
+                "student": 8
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 9,
+            "fields": {
+                "semester": "Fall 2023",
+                "grade": "B",
+                "course": 9,
+                "student": 9
+            }
+        },
+        {
+            "model": "main.enrollment",
+            "pk": 10,
+            "fields": {
+                "semester": "Spring 2023",
+                "grade": "A",
+                "course": 10,
+                "student": 10
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 1,
+            "fields": {
+                "instructor": 1,
+                "course": 1
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 2,
+            "fields": {
+                "instructor": 2,
+                "course": 2
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 3,
+            "fields": {
+                "instructor": 3,
+                "course": 3
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 4,
+            "fields": {
+                "instructor": 4,
+                "course": 4
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 5,
+            "fields": {
+                "instructor": 5,
+                "course": 5
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 6,
+            "fields": {
+                "instructor": 6,
+                "course": 6
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 7,
+            "fields": {
+                "instructor": 7,
+                "course": 7
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 8,
+            "fields": {
+                "instructor": 8,
+                "course": 8
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 9,
+            "fields": {
+                "instructor": 9,
+                "course": 9
+            }
+        },
+        {
+            "model": "main.teaching",
+            "pk": 10,
+            "fields": {
+                "instructor": 10,
+                "course": 10
+            }
+        }
+    ]
+    

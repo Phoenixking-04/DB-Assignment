@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Instructor</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script>
+        function validateForm() {
+            const instructorId = document.forms["instructorForm"]["instructor_id"].value.trim();
+            const firstName = document.forms["instructorForm"]["first_name"].value.trim();
+            const lastName = document.forms["instructorForm"]["last_name"].value.trim();
+            const salary = document.forms["instructorForm"]["salary"].value.trim();
+            // Check for required fields
+            if (!instructorId || !firstName || !lastName || !salary) {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+            // Validate instructor ID and salary input
+            if (isNaN(instructorId) || instructorId.length !== 5) {
+                alert("Instructor ID must be a 5-digit number.");
+                return false;
+            }
+            if (isNaN(salary) || salary <= 0) {
+                alert("Salary must be a positive number.");
+                return false;
+            }
+            return true; // Form is valid
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.location.href='/'">Exit</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="welcome-message">Add Instructor</h1>
+    <form method="post" class="student-form" name="instructorForm" onsubmit="return validateForm()">
+        {% csrf_token %}
+        <div>
+            {{ form.instructor_id.label_tag }}
+            {{ form.instructor_id }}<br>
+            {% if form.instructor_id.errors %}
+                <div class="error">{{ form.instructor_id.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.first_name.label_tag }}
+            {{ form.first_name }}<br>
+            {% if form.first_name.errors %}
+                <div class="error">{{ form.first_name.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}<br>
+            {% if form.last_name.errors %}
+                <div class="error">{{ form.last_name.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.department.label_tag }}
+            {{ form.department }}<br>
+            {% if form.department.errors %}
+                <div class="error">{{ form.department.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.salary.label_tag }}
+            {{ form.salary }}<br>
+            {% if form.salary.errors %}
+                <div class="error">{{ form.salary.errors }}</div>
+            {% endif %}
+        </div>
+        <button type="submit" class="submit-button">Add Instructor</button>
+    </form>
+</body>
+</html>

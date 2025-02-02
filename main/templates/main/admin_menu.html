@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.location.href='/'">Exit</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="welcome-message">Admin Menu</h1>
+
+    <div class="admin-options-container"> 
+        <!-- Container for admin options, arranged using flexbox -->
+        <div class="admin-option-box">
+            <a href="{% url 'add_instructor' %}">Add New Instructor</a>
+        </div>
+        <div class="admin-option-box">
+            <a href="{% url 'add_course' %}">Add New Course</a>
+        </div>
+        <div class="admin-option-box">
+            <a href="{% url 'assign_instructor_course' %}">Assign Instructors to Courses</a>
+        </div>
+        <div class="admin-option-box">
+            <a href="{% url 'admin_view_courses' %}">View Courses</a>
+        </div>
+        <div class="admin-option-box">
+            <a href="{% url 'admin_view_students' %}">View Students</a>
+        </div>
+        <div class="admin-option-box">
+            <a href="{% url 'admin_view_instructors' %}">View Instructors</a>
+        </div>
+    </div>
+</body>
+</html>

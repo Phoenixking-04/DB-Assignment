@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <button class="exit-button" onclick="window.location.href='/'">Exit</button>
+        <nav class="main-menu">
+            <ul class="menu-options">
+                <li><a href="{% url 'view_courses' %}">View Courses</a></li>
+                <li><a href="{% url 'add_student' %}">Add Student</a></li>
+                <li><a href="{% url 'view_students' %}">View Students</a></li>
+                <li><a href="{% url 'view_instructors' %}">View Instructors</a></li>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'enroll_student' %}">Enroll a Student</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="welcome-message">Add Course</h1>
+    <form method="post" class="student-form">
+        {% csrf_token %}
+        <div>
+            {{ form.course_id.label_tag }}
+            {{ form.course_id }}<br>
+            {% if form.course_id.errors %}
+                <div class="error">{{ form.course_id.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.course_name.label_tag }}
+            {{ form.course_name }}<br>
+            {% if form.course_name.errors %}
+                <div class="error">{{ form.course_name.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.department.label_tag }}
+            {{ form.department }}<br>
+            {% if form.department.errors %}
+                <div class="error">{{ form.department.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.credits.label_tag }}
+            {{ form.credits }}<br>
+            {% if form.credits.errors %}
+                <div class="error">{{ form.credits.errors }}</div>
+            {% endif %}
+        </div>
+        <div>
+            <label for="room_capacity">Room Capacity:</label><br>
+            <input type="number" name="room_capacity" min="1" required placeholder="Enter room capacity"><br>
+            <!-- Assuming room_capacity validation is handled in the view -->
+        </div>
+        <h3>Schedule</h3>
+        <div>
+            <label for="start_time">Start Time:</label><br>
+            <input type="number" name="start_hour" min="1" max="12" required>
+            <input type="number" name="start_minute" min="0" max="59" required>
+            <select name="start_period">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+        </div>
+        <div>
+            <label for="end_time">End Time:</label><br>
+            <input type="number" name="end_hour" min="1" max="12" required>
+            <input type="number" name="end_minute" min="0" max="59" required>
+            <select name="end_period">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+            {% if form.non_field_errors %}
+                <div class="error">{{ form.non_field_errors }}</div>
+            {% endif %}
+        </div>
+        <button type="submit" class="submit-button">Add Course</button>
+    </form>
+</body>
+</html>
